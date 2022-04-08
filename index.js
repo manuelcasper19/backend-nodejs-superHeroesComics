@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dbConection = require('./db/config');
-const bodyparse = require('body-parser');
+const path = require('path');
 
 require('dotenv').config();   //para poder acceder a las variables de entorno
 
@@ -26,6 +26,11 @@ app.use( express.json());
 //routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/heroes', require('./routes/heroes'))
+
+
+app.get('*', (req, res) => {
+    res.sendFile( path.resolve( __dirname, 'public/index.html'))
+})
 
 
 
