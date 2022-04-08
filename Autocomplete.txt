@@ -1,0 +1,32 @@
+{
+ "autocomplete": {
+  "path": "superheroe",
+  "query": "sup",
+  "fuzzy": {
+   "maxEdits": 1,
+   "prefixLength": 1,
+   "maxExpansions": 256
+  },
+  "tokenOrder": "any"
+ }
+ 
+}
+
+
+
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "title": [
+        {
+          "foldDiacritics": false,
+          "maxGrams": 7,
+          "minGrams": 3,
+          "tokenization”: "edgeGram",
+          "type": "autocomplete"
+        }
+      ]
+    }
+  }
+}
