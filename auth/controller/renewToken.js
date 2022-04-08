@@ -18,7 +18,7 @@ const renovar =  async ( req, res ) => {
         name: dbUser.name,
         lastname: dbUser.lastname,
         email: dbUser.email,
-        img: dbUser.url,
+        img: dbUser.secure_url,
         uid: dbUser.id,
         public_id: dbUser.public_id,
         token

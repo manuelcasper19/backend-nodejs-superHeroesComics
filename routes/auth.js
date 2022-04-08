@@ -6,7 +6,6 @@ const { validarCamposCorrectos } = require('../middlewares/validar-campos');
 const {renovar, validarEmail} = require('../auth/controller/renewToken');
 const { validarJwt } = require('../middlewares/validar-token');
 const { editarUsuario } = require('../auth/controller/edit');
-const { cambiarFoto } = require('../auth/controller/image');
 const { uploadPhoto } = require('../middlewares/multer');
 
 const router = Router();
@@ -36,10 +35,10 @@ router.put('/edit', uploadPhoto, [
 ], editarUsuario )
 
 
-router.put('/photos',  uploadPhoto, [ 
-    check('uid', 'El id del usuario es necesario').not().isEmpty(),
-    validarCamposCorrectos], 
-    cambiarFoto)
+// router.put('/photos',  uploadPhoto, [ 
+//     check('uid', 'El id del usuario es necesario').not().isEmpty(),
+//     validarCamposCorrectos], 
+//     cambiarFoto)
 
 
 

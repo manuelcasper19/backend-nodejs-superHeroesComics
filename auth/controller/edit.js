@@ -1,5 +1,4 @@
 const usuario = require('../model/Usuario');
-const bcrypt  = require('bcryptjs');
 const { genenarJwt } = require('../helpers/jwt');
 const cloudinary =  require('cloudinary');
 const fs = require('fs-extra');

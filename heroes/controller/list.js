@@ -60,7 +60,7 @@ const findHeroe = async (uid, res) => {
                 personajes: dbHeroe[i].personajes,
                 peliculas: dbHeroe[i].peliculas,
                 uid: dbHeroe[i].uid,
-                url: dbFoto.url 
+                url: dbFoto.secure_url
             }
             
             newHeroe.push(heroe);
@@ -107,7 +107,8 @@ const findHeroe = async (uid, res) => {
                 personajes: dbHeroeAll[i].personajes,
                 peliculas: dbHeroeAll[i].peliculas,
                 uid: dbHeroeAll[i].uid,
-                url: fotos.url 
+                url: fotos.secure_url
+                
             }
             newHeroes.push(heroe);
             

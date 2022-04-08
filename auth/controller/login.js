@@ -38,7 +38,7 @@ const login = async (req, res ) => {
         name: dbUser.name,
         lastname: dbUser.lastname,
         email,
-        img: dbUser.url,
+        img: dbUser.secure_url,
         uid: dbUser.id,
         public_id: dbUser.public_id,
         token
